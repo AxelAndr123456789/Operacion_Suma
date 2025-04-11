@@ -3,7 +3,10 @@
 Este proyecto en Python permite validar si los datos ingresados por el usuario son números válidos (enteros o decimales) y realiza una operación aritmética sencilla (suma por defecto).
 
 ---
-
+## Desarrollador 
+| Apellidos y Nombres |
+| ----|
+ | Lopez Rodriguez Axel Andre | 
 ## ✨ Características
 
 ✔️ Solicita dos operandos al usuario.  
