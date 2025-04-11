@@ -1,48 +1,31 @@
 import unittest
-from operaciones_aritmeticas import OperacionesAritmeticas
+from operaciones_aritmeticas import operaciones_aritmeticas as Division
 
-class TestOperacionesAritmeticas(unittest.TestCase):
-    def test_suma_dosNumeros_retornaSuma(self):
+class Test_division(unittest.TestCase):
+
+    def test_dividir_dosNumeros_retornaCociente(self):
         # Arrange
-        operando1 = 10
-        operando2 = 15
-        resultadoEsperado = 25
+        dividendo = 20
+        divisor = 4
+        resultadoEsperado = 5
 
-        obj = OperacionesAritmeticas(operando1, operando2)
+        objDivision = Division(dividendo, divisor)
 
         # Act
-        resultadoActual = obj.calcularSuma()
+        resultadoActual = objDivision.calcularDivision()
 
         # Assert
-        self.assertEqual(resultadoEsperado, resultadoActual, "Falló la suma")
+        self.assertEqual(resultadoEsperado, resultadoActual, msg="Fallo la división")
 
-    def test_suma_operadorNoNumerico_lanzaExcepcion(self):
-        with self.assertRaises(TypeError):
-            obj = OperacionesAritmeticas(3, "a")
-            obj.calcularSuma()
-
-    def test_division_dosNumeros_retornaDivision(self):
-        # Arrange
-        operando1 = 10
-        operando2 = 15
-        resultadoEsperado = 0.666
-
-        obj = OperacionesAritmeticas(operando1, operando2)
-
-        # Act
-        resultadoActual = obj.calcular_division()
-
-        # Assert
-        self.assertAlmostEqual(resultadoEsperado, resultadoActual, places=2, msg="Falló la división")
-
-    def test_division_operadorNoNumerico_lanzaExcepcion(self):
-        with self.assertRaises(TypeError):
-            obj = OperacionesAritmeticas(3, "a")
-            obj.calcular_division()
-
-    def test_division_divisorCero_lanzaExcepcion(self):
+    def test_dividir_porCero_lanzaExcepcion(self):
+        objDivision = Division(10, 0)
         with self.assertRaises(ZeroDivisionError):
-            obj = OperacionesAritmeticas(3, "0")
-            obj.calcular_division()
+            objDivision.calcularDivision()
+
+    def test_dividir_conOperandoNoNumerico_lanzaExcepcion(self):
+        objDivision = Division(10, 'x')
+        with self.assertRaises(ValueError):
+            objDivision.calcularDivision()
+
 if __name__ == '__main__':
     unittest.main()
