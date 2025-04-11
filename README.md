@@ -1,17 +1,32 @@
-![logopython](https://github.com/user-attachments/assets/bd763561-83af-45b0-80a1-68cc9e505177)
+# 🔢 Validador de Operandos Numéricos
 
-# Aplicación Operación Suma
-## Descripción
-El script implementa la suma de dos numeros y realiza la validación de los operandos
-## Funcionalidades
-- Suma dos operandos
-- Verifica que los operandos sean numeros (int o float)
+Este proyecto en Python permite validar si los datos ingresados por el usuario son números válidos (enteros o decimales) y realiza una operación aritmética sencilla (suma por defecto).
+
+---
+
+## ✨ Características
+
+✔️ Solicita dos operandos al usuario.  
+✔️ Valida que ambos operandos sean números (`int` o `float`).  
+✔️ Realiza la **suma** si los operandos son válidos.  
+❌ Muestra mensajes de error claros y amigables si algún operando no es válido.  
+
+---
+
+## 📋 Requisitos
+
+- 🐍 Python 3.x  
+- 💻 Terminal o entorno de desarrollo compatible
+
+---
+
+## 💡 Ejemplo de salida
+
+✅ Si los datos son válidos:
+
+```bash
+Ingrese el primer operando: 4.5
+Ingrese el segundo operando: 3
+Resultado de la suma: 7.5
 
 
-[Repositorio GitHub](https://github.com/AxelAndr123456789/Operacion_Suma.git)
-
-### Equipo de desarrollo
-| Apelllido y nombres | Rol |
-| ------------------- | ----|
-| Peres Padro, Juan | Jefe de proyecto |
-| Oré Matos, Julio Cesar | Analista |
